@@ -10,7 +10,7 @@ your account and your budget. Nothing new runs in the background.
 
 ## What you need
 
-The **nido command line** (Node 20 or newer), installed and logged in once:
+The **nido command line**, version 0.7.4 or newer (Node 20 or newer), installed and logged in once:
 
 ```bash
 npm install -g @pirol/nido

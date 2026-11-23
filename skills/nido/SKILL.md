@@ -21,6 +21,8 @@ nido whoami
 
 - **`nido` not found:** it needs Node 20 or newer. Ask the person before you install anything,
   then run `npm install -g @pirol/nido`.
+- **Older than 0.7.4:** this skill needs nido 0.7.4 or newer (`--root`, `--expose` and `--connect`
+  came with it). Ask the person, then run `nido update`.
 - **`Not logged in`:** the person logs in themselves. Ask them to run `nido login` in their own
   terminal. It opens their browser, and nido stores its key in `~/.nido/config.json`. On a machine
   without a browser it is `nido login --manual`. Do not run the login for them, and never ask for,
@@ -88,11 +90,12 @@ nido exec <name> -- bash -c 'cd /sandbox/app && pip install -r requirements.txt 
 ```bash
 nido cp ./src <name>:/sandbox/src
 nido cp <name>:/sandbox/results ./results
+nido cp <name>:/sandbox/report.md ./report.md
 ```
 
 - The sandbox side is written `<name>:<path>` and must be below `/sandbox`.
-- Copy folders, not single files: copying one file out creates a folder of that name with the file
-  inside.
+- It works like `cp`: a file lands under the name you give, or inside the target when that is an
+  existing folder or ends in `/`. A folder's contents land in the target folder.
 - Do not copy secrets, `.env` files or SSH keys into a sandbox. Use `--secret` instead.
 
 ## 5. Ports and connected sandboxes

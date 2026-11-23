@@ -1,5 +1,5 @@
 {
   "name": "nido",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Let Qwen Code create and use Pirol sandboxes — small virtual machines in the EU, CPU or with a GPU — through the nido command line on your computer. Runs as you, with your account."
 }
